@@ -1,0 +1,34 @@
+package com.codereader.app.data
+
+import org.junit.Assert.assertEquals
+import org.junit.Test
+import java.io.StringReader
+
+/** @author long */
+class TextPageReaderTest {
+    @Test
+    fun `分段读取连续返回内容且不重复字符`() {
+        val source = "第一段-第二段-结束"
+
+        val first = TextPageReader.read(StringReader(source), startCharacter = 0, pageCharacters = 4)
+        val second = TextPageReader.read(StringReader(source), startCharacter = first.nextCharacter, pageCharacters = 4)
+        val third = TextPageReader.read(StringReader(source), startCharacter = second.nextCharacter, pageCharacters = 20)
+
+        assertEquals(source, first.text + second.text + third.text)
+        assertEquals(false, third.hasMore)
+    }
+
+    @Test
+    fun `同一字符流连续读取不会重新跳过前文`() {
+        val reader = StringReader("abcdefghij")
+
+        val first = TextPageReader.readNext(reader, pageCharacters = 3)
+        val second = TextPageReader.readNext(reader, pageCharacters = 3)
+        val third = TextPageReader.readNext(reader, pageCharacters = 20)
+
+        assertEquals("abc", first.text)
+        assertEquals("def", second.text)
+        assertEquals("ghij", third.text)
+        assertEquals(false, third.hasMore)
+    }
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- long: 旧系统直接显示完整图标，主体按自适应图标的可见窗口等比例映射。 -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp"
+    android:viewportWidth="72" android:viewportHeight="72">
+    <path android:fillColor="#063C30" android:pathData="M36 0 A36 36 0 1 1 36 72 A36 36 0 1 1 36 0 Z" />
+    <group android:translateX="-18" android:translateY="-18">
+    <path android:fillColor="#309976" android:pathData="M30 33 Q43 30 54 37 Q65 30 78 33 L78 71 Q65 68 54 76 Q43 68 30 71 Z" />
+    <path android:fillColor="#79D8B8" android:pathData="M30 33 Q43 30 53 37 L53 72 Q43 65 30 68 Z" />
+    <path android:fillColor="#F7FAF0" android:pathData="M55 37 Q65 30 78 33 L78 68 Q65 65 55 72 Z" />
+    <path android:fillColor="#E8C474" android:pathData="M51 29 Q54 27 57 29 L57 43 L54 40 L51 43 Z" />
+    <path android:fillColor="#063C30" android:pathData="M43 43 L46 46 L39 53 L46 60 L43 63 L33 53 Z M65 43 L62 46 L69 53 L62 60 L65 63 L75 53 Z" />
+    </group>
+</vector>

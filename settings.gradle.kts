@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidCodeReader"
+rootProject.name = "CodeReader"
 include(":app")

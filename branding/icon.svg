@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 72 72" role="img" aria-label="CodeReader">
+<title>CodeReader — code pages and bookmark</title>
+<rect x="18" y="18" width="72" height="72" rx="16" fill="#063C30"/>
+<path fill="#309976" d="M30 33 Q43 30 54 37 Q65 30 78 33 L78 71 Q65 68 54 76 Q43 68 30 71 Z"/>
+<path fill="#79D8B8" d="M30 33 Q43 30 53 37 L53 72 Q43 65 30 68 Z"/>
+<path fill="#F7FAF0" d="M55 37 Q65 30 78 33 L78 68 Q65 65 55 72 Z"/>
+<path fill="#E8C474" d="M51 29 Q54 27 57 29 L57 43 L54 40 L51 43 Z"/>
+<path fill="#063C30" d="M43 43 L46 46 L39 53 L46 60 L43 63 L33 53 Z M65 43 L62 46 L69 53 L62 60 L65 63 L75 53 Z"/>
+</svg>

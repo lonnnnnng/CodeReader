@@ -6,23 +6,23 @@ plugins {
 }
 
 android {
-    namespace = "com.lonnnnnng.codereader"
+    namespace = "com.codereader.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.lonnnnnng.codereader"
+        applicationId = "com.codereader.app"
         minSdk = 24
         targetSdk = 36
-        versionCode = 29
-        versionName = "0.1.28"
+        versionCode = 1
+        versionName = "1.0.0"
 
-        // 真机与 Apple Silicon 模拟器均为 ARM，剔除 x86/x86_64 的 Oniguruma so 以减小体积。 @author long
+        // 正式发行只面向 arm64 设备，调试与发行使用同一 ABI 范围，避免验收与最终安装包不一致。 @author long
         ndk {
-            abiFilters += setOf("arm64-v8a", "armeabi-v7a")
+            abiFilters += setOf("arm64-v8a")
         }
 
         // 自定义 runner：修复 Android 16 测试 APK 类加载器隔离后 Compose 用例的 coroutines-test ServiceLoader 检查失败。 @author long
-        testInstrumentationRunner = "com.lonnnnnng.codereader.ServiceLoaderBridgeRunner"
+        testInstrumentationRunner = "com.codereader.app.ServiceLoaderBridgeRunner"
     }
 
     signingConfigs {

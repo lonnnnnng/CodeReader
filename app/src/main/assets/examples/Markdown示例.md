@@ -1,6 +1,6 @@
 ---
 title: Markdown 功能示例
-category: 灵阅内置文档
+category: CodeReader 内置文档
 features:
   - syntax-highlight
   - math
@@ -10,13 +10,13 @@ verified: true
 
 # Markdown 功能示例
 
-这份文档展示灵阅支持的常用 Markdown 能力，所有内容均可离线渲染。
+这份文档展示 CodeReader 支持的常用 Markdown 能力，所有内容均可离线渲染。
 
 ## 本地图片与附件
 
-![灵阅阅读内核示意图](media/reader-architecture.svg)
+![CodeReader 阅读内核示意图](media/reader-architecture.svg)
 
-点击图片可进入放大预览；[打开同项目附件](attachments/快速阅读说明.txt) 可继续在灵阅中阅读。
+点击图片可进入放大预览；[打开同项目附件](attachments/快速阅读说明.txt) 可继续在 CodeReader 中阅读。
 
 ## 文本与列表
 
@@ -52,7 +52,7 @@ public final class UserService {
 
 ```json
 {
-  "name": "android-code-reader",
+  "name": "CodeReader",
   "enabled": true,
   "languages": ["java", "python", "go", "rust"]
 }

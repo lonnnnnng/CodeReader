@@ -1,5 +1,7 @@
 # Android 16 instrumentation 类加载器与 coroutines-test 兼容问题排查记录
 
+> 这是测试框架的技术排查档案；CodeReader 当前真机结果另见《真机验证报告》。
+
 > 排查时间：2026-09-05～09-06 CST
 > 排查设备：Redmi Note 8 Pro（Android 16 / API 36，arm64-v8a）；对照环境：`ACRR_Smoke`（Pixel 7 配置，API 35，arm64-v8a）模拟器
 > 影响范围：仅 instrumentation 测试（androidTest 源集），正式包运行时行为不受影响
@@ -41,7 +43,7 @@ java.lang.IllegalStateException: Exception handler was not found via a ServiceLo
 
 ## 修复方案
 
-`app/src/androidTest/java/com/lonnnnnng/codereader/ServiceLoaderBridgeRunner.kt`：
+`app/src/androidTest/java/com/codereader/app/ServiceLoaderBridgeRunner.kt`：
 
 1. 在 `onCreate`（任何测试执行前）通过 `Class.forName` 定位应用加载器的 `CoroutineExceptionHandlerImplKt`；
 2. 读取 `platformExceptionHandlers`，若已包含 `ExceptionCollectorAsService`（旧平台或上游未来修复）则跳过，保持零副作用；
